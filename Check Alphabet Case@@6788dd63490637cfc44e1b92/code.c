@@ -7,7 +7,7 @@ int main(){
         printf("Lowercase");
     }
     else if(a>=65 && a<=90){
-        print f("Uppercase");
+        printf("Uppercase");
 
 
     }
