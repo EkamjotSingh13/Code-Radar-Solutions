@@ -8,6 +8,6 @@ int main(){
         printf("Divisible");
      }
     else{
-        printf("Not Divisible")
+        printf("Not Divisible");
     }
 }
