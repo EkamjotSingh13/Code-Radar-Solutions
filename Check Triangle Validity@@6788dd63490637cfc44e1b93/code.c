@@ -11,4 +11,5 @@ int main(){
         printf("Invalid");
 
     }
+    return 0;
 }
