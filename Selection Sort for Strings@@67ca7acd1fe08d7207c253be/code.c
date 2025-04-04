@@ -1,20 +1,26 @@
-// Your code here...
 #include<stdio.h>
+#include<string.h>
 
-int selectionSort(char arr[],int n){
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n-i-1;j++){
-            if(arr[j]>arr[j+1]){
-                char temt=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temt;
+void selectionSort(char arr[][100],int n){
+    for(int i=0;i<n-1;i++){
+        int mini=i;
+        for(int j=i+1;j<n;j++){
+            if(strcmp(arr[j],arr[mini])<0){
+                mini=j;
+                
             }
+        }
+        if(mini!=i){
+        char temp[100];
+        strcpy(temp,arr[i]); 
+        strcpy(arr[i],arr[mini]);
+        strcpy(arr[mini],temp);
         }
     }
 }
 
-int printArray(char arr[],int n){
+void printArray(char arr[][100],int n){
     for(int i=0;i<n;i++){
-        printf("%c ",arr[i]);
+        printf("%s\n",arr[i]);
     }
 }
